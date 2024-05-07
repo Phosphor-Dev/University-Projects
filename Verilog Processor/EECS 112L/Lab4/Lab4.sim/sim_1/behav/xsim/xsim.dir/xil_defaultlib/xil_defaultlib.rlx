@@ -1,0 +1,23 @@
+0.7
+2020.2
+Oct 19 2021
+03:16:22
+C:/Users/Steven/Desktop/EECS 112L/Lab4/Lab4.sim/sim_1/behav/xsim/glbl.v,1634335545,verilog,,,,glbl,,,,,,,,
+C:/Users/Steven/Desktop/Lab4_file_uploaded 3/ALU.v,1636220816,verilog,,C:/Users/Steven/Desktop/Lab4_file_uploaded 3/ALUControl.v,,ALU,,,,,,,,
+C:/Users/Steven/Desktop/Lab4_file_uploaded 3/ALUControl.v,1669239308,verilog,,C:/Users/Steven/Desktop/Lab4_file_uploaded 3/EX_Forwarding_unit.v,,ALUControl,,,,,,,,
+C:/Users/Steven/Desktop/Lab4_file_uploaded 3/EX_Forwarding_unit.v,1669255449,verilog,,C:/Users/Steven/Desktop/Lab4_file_uploaded 3/EX_pipe_stage.v,,EX_Forwarding_unit,,,,,,,,
+C:/Users/Steven/Desktop/Lab4_file_uploaded 3/EX_pipe_stage.v,1669267474,verilog,,C:/Users/Steven/Desktop/Lab4_file_uploaded 3/Hazard_detection.v,,EX_pipe_stage,,,,,,,,
+C:/Users/Steven/Desktop/Lab4_file_uploaded 3/Hazard_detection.v,1669238242,verilog,,C:/Users/Steven/Desktop/Lab4_file_uploaded 3/ID_pipe_stage.v,,Hazard_detection,,,,,,,,
+C:/Users/Steven/Desktop/Lab4_file_uploaded 3/ID_pipe_stage.v,1669267366,verilog,,C:/Users/Steven/Desktop/Lab4_file_uploaded 3/IF_pipe_stage.v,,ID_pipe_stage,,,,,,,,
+C:/Users/Steven/Desktop/Lab4_file_uploaded 3/IF_pipe_stage.v,1669255644,verilog,,C:/Users/Steven/Desktop/Lab4_file_uploaded 3/control.v,,IF_pipe_stage,,,,,,,,
+C:/Users/Steven/Desktop/Lab4_file_uploaded 3/control.v,1636220832,verilog,,C:/Users/Steven/Desktop/Lab4_file_uploaded 3/data_memory.v,,control,,,,,,,,
+C:/Users/Steven/Desktop/Lab4_file_uploaded 3/data_memory.v,1636220840,verilog,,C:/Users/Steven/Desktop/Lab4_file_uploaded 3/instruction_mem.v,,data_memory,,,,,,,,
+C:/Users/Steven/Desktop/Lab4_file_uploaded 3/instruction_mem.v,1669222252,verilog,,C:/Users/Steven/Desktop/Lab4_file_uploaded 3/mips_32.v,,instruction_mem,,,,,,,,
+C:/Users/Steven/Desktop/Lab4_file_uploaded 3/mips_32.v,1669268254,verilog,,C:/Users/Steven/Desktop/Lab4_file_uploaded 3/mux.v,,mips_32,,,,,,,,
+C:/Users/Steven/Desktop/Lab4_file_uploaded 3/mux.v,1636220902,verilog,,C:/Users/Steven/Desktop/Lab4_file_uploaded 3/mux4.v,,mux2,,,,,,,,
+C:/Users/Steven/Desktop/Lab4_file_uploaded 3/mux4.v,1636220910,verilog,,C:/Users/Steven/Desktop/Lab4_file_uploaded 3/pipe_reg.v,,mux4,,,,,,,,
+C:/Users/Steven/Desktop/Lab4_file_uploaded 3/pipe_reg.v,1636220926,verilog,,C:/Users/Steven/Desktop/Lab4_file_uploaded 3/pipe_reg_en.v,,pipe_reg,,,,,,,,
+C:/Users/Steven/Desktop/Lab4_file_uploaded 3/pipe_reg_en.v,1636220918,verilog,,C:/Users/Steven/Desktop/Lab4_file_uploaded 3/register_file.v,,pipe_reg_en,,,,,,,,
+C:/Users/Steven/Desktop/Lab4_file_uploaded 3/register_file.v,1669228742,verilog,,C:/Users/Steven/Desktop/Lab4_file_uploaded 3/sign_extend.v,,register_file,,,,,,,,
+C:/Users/Steven/Desktop/Lab4_file_uploaded 3/sign_extend.v,1636220944,verilog,,C:/Users/Steven/Desktop/Lab4_file_uploaded 3/tb_mips_32.v,,sign_extend,,,,,,,,
+C:/Users/Steven/Desktop/Lab4_file_uploaded 3/tb_mips_32.v,1669269457,verilog,,,,tb_mips_32,,,,,,,,

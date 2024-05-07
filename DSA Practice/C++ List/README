@@ -1,0 +1,12 @@
+Tabilisma, Steven
+CSE 101, pa4
+
+Programming Assignment #5:
+
+Shuffle.cpp     Main file. makes use of the List.cpp file. 
+
+ListTest.cpp    Main testing file for all the functions that are defined in List.cpp.
+
+List.h          Header file for List.cpp. Contains the declarations of all functions created in List.cpp.
+
+List.cpp        Contains the definitions of all functions specified in List.h. Implements a ListADT that is used to supplement Shuffle.cpp

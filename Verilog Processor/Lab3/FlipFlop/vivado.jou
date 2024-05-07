@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu Oct  6 21:54:11 2022
+# Process ID: 13832
+# Current directory: C:/Users/Steven/Desktop/Verilog/Lab3/FlipFlop
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent29592 C:\Users\Steven\Desktop\Verilog\Lab3\FlipFlop\FlipFlop.xpr
+# Log file: C:/Users/Steven/Desktop/Verilog/Lab3/FlipFlop/vivado.log
+# Journal file: C:/Users/Steven/Desktop/Verilog/Lab3/FlipFlop\vivado.jou
+# Running On: StevenPC, OS: Windows, CPU Frequency: 3593 MHz, CPU Physical cores: 16, Host memory: 34303 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Steven/Desktop/Verilog/Lab3/FlipFlop/FlipFlop.xpr
+update_compile_order -fileset sources_1

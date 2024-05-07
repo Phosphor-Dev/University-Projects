@@ -1,0 +1,14 @@
+0.7
+2020.2
+Oct 19 2021
+03:16:22
+C:/Users/Steven/Desktop/Verilog/Lab4/data_path/data_path.sim/sim_1/behav/xsim/glbl.v,1634335545,verilog,,,,glbl,,,,,,,,
+C:/Users/Steven/Desktop/Verilog/Lab4/data_path/data_path.srcs/sim_1/new/tb_Datapath.v,1646100782,verilog,,,,dp_tb_top,,,,,,,,
+C:/Users/Steven/Desktop/Verilog/Lab4/data_path/data_path.srcs/sources_1/new/ALU.v,1646102560,verilog,,C:/Users/Steven/Desktop/Verilog/Lab4/data_path/data_path.srcs/sources_1/new/DataMem.v,,alu_32,,,,,,,,
+C:/Users/Steven/Desktop/Verilog/Lab4/data_path/data_path.srcs/sources_1/new/DataMem.v,1646101265,verilog,,C:/Users/Steven/Desktop/Verilog/Lab4/data_path/data_path.srcs/sources_1/new/Datapath.v,,DataMem,,,,,,,,
+C:/Users/Steven/Desktop/Verilog/Lab4/data_path/data_path.srcs/sources_1/new/Datapath.v,1647232650,verilog,,C:/Users/Steven/Desktop/Verilog/Lab4/data_path/data_path.srcs/sources_1/new/FlipFlop.v,,data_path,,,,,,,,
+C:/Users/Steven/Desktop/Verilog/Lab4/data_path/data_path.srcs/sources_1/new/FlipFlop.v,1646101389,verilog,,C:/Users/Steven/Desktop/Verilog/Lab4/data_path/data_path.srcs/sources_1/new/ImmGen.v,,FlipFlop,,,,,,,,
+C:/Users/Steven/Desktop/Verilog/Lab4/data_path/data_path.srcs/sources_1/new/ImmGen.v,1646101625,verilog,,C:/Users/Steven/Desktop/Verilog/Lab4/data_path/data_path.srcs/sources_1/new/InstMem.v,,ImmGen,,,,,,,,
+C:/Users/Steven/Desktop/Verilog/Lab4/data_path/data_path.srcs/sources_1/new/InstMem.v,1646101774,verilog,,C:/Users/Steven/Desktop/Verilog/Lab4/data_path/data_path.srcs/sources_1/new/Mux.v,,InstMem,,,,,,,,
+C:/Users/Steven/Desktop/Verilog/Lab4/data_path/data_path.srcs/sources_1/new/Mux.v,1646114689,verilog,,C:/Users/Steven/Desktop/Verilog/Lab4/data_path/data_path.srcs/sources_1/new/RegFile.v,,MUX21,,,,,,,,
+C:/Users/Steven/Desktop/Verilog/Lab4/data_path/data_path.srcs/sources_1/new/RegFile.v,1646118559,verilog,,C:/Users/Steven/Desktop/Verilog/Lab4/data_path/data_path.srcs/sim_1/new/tb_Datapath.v,,RegFile,,,,,,,,

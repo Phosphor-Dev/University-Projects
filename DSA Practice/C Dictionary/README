@@ -1,0 +1,20 @@
+Steven Tabilisma
+Programming Assignment #7:
+
+Dictionary.h        Contains declarations for functions of Lex.c.
+
+Dictionary.c        Contains definitions for Dictionary.h functions. Utilizes a binary search tree structure. 
+                    Contains 2 main structs; NodeObj and DictionaryObj. NodeObj contains
+                    data and pointers to other Nodes. DictionaryObj contains data and
+                    pointers to the root Node and cursor Node.
+
+Order.c:            Utilizes Dictionary.h and Dictionary.c to sort a txt file 
+                    alphabetically and print to output file. Prints
+                    in order, post order, and pre order
+
+DictionaryTest.c    Testing file for Dictionary.h.
+
+Makefile            Creates object files for Order and DictionaryTest.
+
+README              Descriptions of files submitted.
+

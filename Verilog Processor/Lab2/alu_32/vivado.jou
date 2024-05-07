@@ -1,0 +1,42 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Sun Feb 13 22:42:20 2022
+# Process ID: 20848
+# Current directory: C:/Users/Steven/Desktop/Verilog/Lab2/alu_32
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20292 C:\Users\Steven\Desktop\Verilog\Lab2\alu_32\alu_32.xpr
+# Log file: C:/Users/Steven/Desktop/Verilog/Lab2/alu_32/vivado.log
+# Journal file: C:/Users/Steven/Desktop/Verilog/Lab2/alu_32\vivado.jou
+# Running On: Steven, OS: Windows, CPU Frequency: 3593 MHz, CPU Physical cores: 16, Host memory: 34303 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Steven/Desktop/Verilog/Lab2/alu_32/alu_32.xpr
+update_compile_order -fileset sources_1
+close_project
+open_project C:/Users/Steven/Desktop/Verilog/Lab3/InstMem/InstMem.xpr
+launch_simulation
+source InstMem_tb.tcl
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source InstMem_tb.tcl
+add_force {/InstMem_tb/addr[2]} -radix hex {1 0ns}
+close_sim
+launch_simulation
+source InstMem_tb.tcl
+close_sim
+launch_simulation
+source InstMem_tb.tcl
+open_project C:/Users/Steven/Desktop/Verilog/Lab2/alu_32/alu_32.xpr
+update_compile_order -fileset sources_1
+current_project InstMem
+close_sim
+launch_simulation
+current_project alu_32
+close_project
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation

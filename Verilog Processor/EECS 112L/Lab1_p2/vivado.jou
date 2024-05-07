@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu Oct  6 22:01:26 2022
+# Process ID: 21784
+# Current directory: C:/Users/Steven/Desktop/EECS 112L/Lab1_p2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent26744 C:\Users\Steven\Desktop\EECS 112L\Lab1_p2\Lab1_p2.xpr
+# Log file: C:/Users/Steven/Desktop/EECS 112L/Lab1_p2/vivado.log
+# Journal file: C:/Users/Steven/Desktop/EECS 112L/Lab1_p2\vivado.jou
+# Running On: StevenPC, OS: Windows, CPU Frequency: 3593 MHz, CPU Physical cores: 16, Host memory: 34303 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Steven/Desktop/EECS 112L/Lab1_p2/Lab1_p2.xpr}

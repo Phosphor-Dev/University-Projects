@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e74e04b3-250d-4141-aa6a-eb4893db31a8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../Lab01/Lab1_part0.X/nbproject/Makefile-genesis.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Lab01/Lab1_part0.X/nbproject/Makefile-genesis.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Lab01/Lab1_part3.X/nbproject/Makefile-default.mk" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Lab01/Lab1_part3.X/nbproject/Makefile-default.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Lab01/Lab1_part3.X/nbproject/Makefile-genesis.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Lab01/Lab1_part3.X/nbproject/Makefile-genesis.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Lab01/Lab1_part3.X/nbproject/configurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Lab01/Lab1_part3.X/nbproject/configurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Lab01/Lab1_part3.X/nbproject/private/configurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Lab01/Lab1_part3.X/nbproject/private/configurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Lab02/Calculator.X/Calculator.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Lab02/Calculator.X/Calculator.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Lab02/Calculator.X/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Lab02/Calculator.X/nbproject/private/private.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Lab03/MatrixMath.X/mml_test.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Lab03/MatrixMath.X/mml_test.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Lab03/MatrixMath.X/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Lab03/MatrixMath.X/nbproject/private/private.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Lab04/RPNotation.X/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Lab04/RPNotation.X/nbproject/private/private.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Lab05/LinkedLists.X/dist/default/debug/memoryfile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Lab05/LinkedLists.X/dist/default/debug/memoryfile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Lab05/LinkedLists.X/dist/default/production/memoryfile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Lab05/LinkedLists.X/dist/default/production/memoryfile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Lab05/LinkedLists.X/nbproject/Makefile-default.mk" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Lab05/LinkedLists.X/nbproject/Makefile-default.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Lab05/LinkedLists.X/nbproject/Makefile-genesis.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Lab05/LinkedLists.X/nbproject/Makefile-genesis.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Lab05/LinkedLists.X/nbproject/configurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Lab05/LinkedLists.X/nbproject/configurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Lab05/LinkedLists.X/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Lab05/LinkedLists.X/nbproject/private/private.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Lab06/BasicIO.X/ButtonsTest.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Lab06/BasicIO.X/ButtonsTest.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Lab06/BasicIO.X/bounce_switch.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Lab06/BasicIO.X/bounce_switch.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Lab06/BasicIO.X/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Lab06/BasicIO.X/nbproject/private/private.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Lab07/ToasterOven.X/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Lab07/ToasterOven.X/nbproject/private/private.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1fo2ckAfnomDwbVpDtBJuf0JQwh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e74e04b3-250d-4141-aa6a-eb4893db31a8" name="Default Changelist" comment="" />
+      <created>1596870206495</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596870206495</updated>
+    </task>
+    <servers />
+  </component>
+</project>

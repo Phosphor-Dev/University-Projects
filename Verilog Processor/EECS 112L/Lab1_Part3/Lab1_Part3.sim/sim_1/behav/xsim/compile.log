@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/EECS 112L/Lab1_Part3/Lab1_Part3.srcs/sim_1/new/dff_PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dff_PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/EECS 112L/Lab1_Part3/Lab1_Part3.srcs/sim_1/new/tb_dff_PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dff_PC

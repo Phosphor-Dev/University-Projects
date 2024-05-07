@@ -1,0 +1,14 @@
+Tests
+1 +2 *(3+(4-1)+2).7 * 6 . 1 + 1 + 1 + 2.1+2*(3+4).7*86.1+(2+1).
+
+
+Grammar
+
+letter = “a” | “b” | ... | “z”.
+digit = “0” | “1” | ... | “9”.
+identifier = letter {letter | digit}.
+number = digit {digit}.
+factor = identifier | number | “(“ expression “)”.
+term = factor { (“*” | “/”) factor}.
+expression = term {(“+” | “-”) term}.
+computation = “computation” { “var” identifier “<-” expression “;” } expression { “;” expression } “.”

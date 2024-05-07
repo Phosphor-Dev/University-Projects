@@ -1,0 +1,16 @@
+0.7
+2020.2
+Oct 19 2021
+03:16:22
+C:/Users/Steven/Desktop/EECS 112L/L2/L2.sim/sim_1/behav/xsim/glbl.v,1634335545,verilog,,,,glbl,,,,,,,,
+C:/Users/Steven/Desktop/LAB2/ALU.v,1667735664,verilog,,C:/Users/Steven/Desktop/LAB2/ALUControl.v,,ALU,,,,,,,,
+C:/Users/Steven/Desktop/LAB2/ALUControl.v,1667506226,verilog,,C:/Users/Steven/Desktop/LAB2/control.v,,ALUControl,,,,,,,,
+C:/Users/Steven/Desktop/LAB2/control.v,1667735511,verilog,,C:/Users/Steven/Desktop/LAB2/data_memory.v,,control,,,,,,,,
+C:/Users/Steven/Desktop/LAB2/data_memory.v,1611025354,verilog,,C:/Users/Steven/Desktop/LAB2/datapath.v,,data_memory,,,,,,,,
+C:/Users/Steven/Desktop/LAB2/datapath.v,1667703597,verilog,,C:/Users/Steven/Desktop/LAB2/instruction_mem.v,,datapath,,,,,,,,
+C:/Users/Steven/Desktop/LAB2/instruction_mem.v,1667801784,verilog,,C:/Users/Steven/Desktop/LAB2/mips_32.v,,instruction_mem,,,,,,,,
+C:/Users/Steven/Desktop/LAB2/mips_32.v,1610606848,verilog,,C:/Users/Steven/Desktop/LAB2/mux2.v,,mips_32,,,,,,,,
+C:/Users/Steven/Desktop/LAB2/mux2.v,1610570510,verilog,,C:/Users/Steven/Desktop/LAB2/register_file.v,,mux2,,,,,,,,
+C:/Users/Steven/Desktop/LAB2/register_file.v,1610608242,verilog,,C:/Users/Steven/Desktop/LAB2/sign_extend.v,,register_file,,,,,,,,
+C:/Users/Steven/Desktop/LAB2/sign_extend.v,1610570606,verilog,,C:/Users/Steven/Desktop/LAB2/tb_mips_32.v,,sign_extend,,,,,,,,
+C:/Users/Steven/Desktop/LAB2/tb_mips_32.v,1667802172,verilog,,,,tb_mips_32,,,,,,,,

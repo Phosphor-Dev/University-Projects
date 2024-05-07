@@ -1,0 +1,22 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/LAB2/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/LAB2/ALUControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/LAB2/control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/LAB2/data_memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/LAB2/datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/LAB2/instruction_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instruction_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/LAB2/mips_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mips_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/LAB2/mux2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/LAB2/register_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/LAB2/sign_extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sign_extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/LAB2/tb_mips_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_mips_32

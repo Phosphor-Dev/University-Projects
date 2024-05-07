@@ -1,0 +1,8 @@
+{
+    "editor.tokenColorCustomizations": {
+        "[AMOLED Black]": {
+            "comments": "#43b581",
+            "strings": "#43b581"
+        }
+    },
+}

@@ -1,0 +1,34 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/Lab4/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/Lab4/ALUControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/Lab4/EX_Forwarding_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_Forwarding_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/Lab4/EX_pipe_stage.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_pipe_stage
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/Lab4/Hazard_detection.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Hazard_detection
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/Lab4/ID_pipe_stage.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_pipe_stage
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/Lab4/IF_pipe_stage.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_pipe_stage
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/Lab4/control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/Lab4/data_memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/Lab4/instruction_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instruction_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/Lab4/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/Lab4/mux4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/Lab4/pipe_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pipe_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/Lab4/pipe_reg_en.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pipe_reg_en
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/Lab4/register_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/Lab4/sign_extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sign_extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Steven/Desktop/Lab4/mips_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mips_32

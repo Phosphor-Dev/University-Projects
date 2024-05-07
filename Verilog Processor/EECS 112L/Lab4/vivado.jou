@@ -1,0 +1,39 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu Mar  9 17:17:38 2023
+# Process ID: 40664
+# Current directory: C:/Users/Steven/Desktop/UCI/Verilog/EECS 112L/Lab4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent38860 C:\Users\Steven\Desktop\UCI\Verilog\EECS 112L\Lab4\Lab4.xpr
+# Log file: C:/Users/Steven/Desktop/UCI/Verilog/EECS 112L/Lab4/vivado.log
+# Journal file: C:/Users/Steven/Desktop/UCI/Verilog/EECS 112L/Lab4\vivado.jou
+# Running On: StevenPC, OS: Windows, CPU Frequency: 3593 MHz, CPU Physical cores: 16, Host memory: 34303 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Steven/Desktop/UCI/Verilog/EECS 112L/Lab4/Lab4.xpr}
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files {{C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/ALU.v}}] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files {{C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/ALUControl.v}}] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files {{C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/EX_Forwarding_unit.v}}] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files {{C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/EX_pipe_stage.v}}] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files {{C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/Hazard_detection.v}}] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files {{C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/ID_pipe_stage.v}}] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files {{C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/IF_pipe_stage.v}}] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files {{C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/control.v}}] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files {{C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/data_memory.v}}] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files {{C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/instruction_mem.v}}] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files {{C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/mips_32.v}}] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files {{C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/mux.v}}] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files {{C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/mux4.v}}] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files {{C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/pipe_reg.v}}] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files {{C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/pipe_reg_en.v}}] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files {{C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/register_file.v}}] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files {{C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/sign_extend.v}}] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files {{C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/tb_mips_32.v}}] -no_script -reset -force -quiet
+remove_files  {{C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/ALU.v} {C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/ALUControl.v} {C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/EX_Forwarding_unit.v} {C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/EX_pipe_stage.v} {C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/Hazard_detection.v} {C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/ID_pipe_stage.v} {C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/IF_pipe_stage.v} {C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/control.v} {C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/data_memory.v} {C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/instruction_mem.v} {C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/mips_32.v} {C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/mux.v} {C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/mux4.v} {C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/pipe_reg.v} {C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/pipe_reg_en.v} {C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/register_file.v} {C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/sign_extend.v} {C:/Users/Steven/Desktop/UCI/Verilog/Lab4_file_uploaded 3/tb_mips_32.v}}
+add_files {{C:/Users/Steven/Desktop/UCI/Verilog/EECS 112L/Lab4/pipe_reg_en.v} {C:/Users/Steven/Desktop/UCI/Verilog/EECS 112L/Lab4/Lab4.sim/sim_1/behav/xsim/glbl.v} {C:/Users/Steven/Desktop/UCI/Verilog/EECS 112L/Lab4/ALU.v} {C:/Users/Steven/Desktop/UCI/Verilog/EECS 112L/Lab4/mux4.v} {C:/Users/Steven/Desktop/UCI/Verilog/EECS 112L/Lab4/instruction_mem.v} {C:/Users/Steven/Desktop/UCI/Verilog/EECS 112L/Lab4/Hazard_detection.v} {C:/Users/Steven/Desktop/UCI/Verilog/EECS 112L/Lab4/EX_Forwarding_unit.v} {C:/Users/Steven/Desktop/UCI/Verilog/EECS 112L/Lab4/control.v} {C:/Users/Steven/Desktop/UCI/Verilog/EECS 112L/Lab4/data_memory.v} {C:/Users/Steven/Desktop/UCI/Verilog/EECS 112L/Lab4/ALUControl.v} {C:/Users/Steven/Desktop/UCI/Verilog/EECS 112L/Lab4/ID_pipe_stage.v} {C:/Users/Steven/Desktop/UCI/Verilog/EECS 112L/Lab4/IF_pipe_stage.v} {C:/Users/Steven/Desktop/UCI/Verilog/EECS 112L/Lab4/EX_pipe_stage.v} {C:/Users/Steven/Desktop/UCI/Verilog/EECS 112L/Lab4/mips_32.v} {C:/Users/Steven/Desktop/UCI/Verilog/EECS 112L/Lab4/pipe_reg.v} {C:/Users/Steven/Desktop/UCI/Verilog/EECS 112L/Lab4/register_file.v} {C:/Users/Steven/Desktop/UCI/Verilog/EECS 112L/Lab4/mux.v} {C:/Users/Steven/Desktop/UCI/Verilog/EECS 112L/Lab4/sign_extend.v}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1

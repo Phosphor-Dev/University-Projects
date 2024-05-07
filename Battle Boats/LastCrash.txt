@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "BattleBoatsPC.py", line 598, in runStateMachine
+    self.theirField.setFieldStatus(row, col, FieldStatus.FIELD_SQUARE_MISS)
+  File "BattleBoatsPC.py", line 274, in setFieldStatus
+    oldStatus = self.fieldArray[row][col]
+IndexError: list index out of range

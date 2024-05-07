@@ -1,0 +1,25 @@
+PA 2 
+Steven Tabilisma 
+
+BigInteger.h          Declares functions of BigInteger.cpp.
+
+BigInteger.cpp        Defines all the functions that Arithmetic.cpp utilizes.
+
+Arithmetic.cpp        Main client for this assignment. Utilizes functions defined in BigInteger.c
+                      Accessible through:
+                      make Arithmetic
+                      ./Arithmetic infile.txt outfile.txt         
+
+List.h:               Declares functions available to BigInteger.c.
+
+List.cpp:             Defines BigInteger.c functions.
+
+BigIntegerTest.cpp:   Testing file for BigInteger.c and BigInteger.h files. Output in BigIntegerTest.txt
+                      Accessible through:
+                      make BigIntegerTest
+                      ./BigInteger    
+
+ListTest.cpp:         Testing file for List.c and List.h files. Outputs in ListTest.txt
+                      Accessible through:
+                      make ListTest
+                      ./ListTest

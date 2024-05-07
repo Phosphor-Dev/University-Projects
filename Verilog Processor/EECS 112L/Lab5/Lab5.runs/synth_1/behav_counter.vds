@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Sat Dec  3 01:59:02 2022
+# Process ID: 34868
+# Current directory: C:/Users/Steven/Desktop/EECS 112L/Lab5/Lab5.runs/synth_1
+# Command line: vivado.exe -log behav_counter.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source behav_counter.tcl
+# Log file: C:/Users/Steven/Desktop/EECS 112L/Lab5/Lab5.runs/synth_1/behav_counter.vds
+# Journal file: C:/Users/Steven/Desktop/EECS 112L/Lab5/Lab5.runs/synth_1\vivado.jou
+# Running On: StevenPC, OS: Windows, CPU Frequency: 3593 MHz, CPU Physical cores: 16, Host memory: 34303 MB
+#-----------------------------------------------------------
+source behav_counter.tcl -notrace
+ERROR: [Common 17-165] Too many positional options when parsing '112L/Lab5/Lab5.srcs/utils_1/imports/synth_1/behav_counter.dcp', please type 'read_checkpoint -help' for usage info.
+INFO: [Common 17-206] Exiting Vivado at Sat Dec  3 01:59:07 2022...

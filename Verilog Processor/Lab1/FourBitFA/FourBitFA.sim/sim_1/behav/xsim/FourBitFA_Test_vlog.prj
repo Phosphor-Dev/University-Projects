@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../FourBitFA.srcs/sources_1/new/FourBitFA.v" \
+"../../../../FourBitFA.srcs/sim_1/new/FourBitFA_Test.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
