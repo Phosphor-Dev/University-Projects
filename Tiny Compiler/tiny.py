@@ -1,13 +1,11 @@
 class Parse():
     def __init__(self, path):
-        self.letters = "abcdefghijklmnopqrstuvwxyz"
-        self.digits = "0123456789"
         self.relOp = ["==", "!=", "<", "<=", ">", ">="]
 
         self.symbols = "<>+-!="
         self.keywords = ["void", "var", "function", "do", "od", "if", "then", "else", "fi", "return", "call", "let"]
         self.functions = ["main",  "InputNum",  "OutputNum", "OutputNewLine"]
-        self.identifiers = self.letters + self.digits
+        self.identifiers = "abcdefghijklmnopqrstuvwxyz" + "0123456789"
 
         self.path = path
         with open(path, "r") as file:
@@ -16,8 +14,6 @@ class Parse():
         self.currentProgram = self.tokenize(content)
         self.currentToken = self.currentProgram[0]
         self.variables = {}
-
-        self.depth = 0
 
         self.computation()
 
@@ -29,7 +25,6 @@ class Parse():
                 self.currentToken = self.currentProgram[0]
             else:
                 self.currentToken = None
-        print([self.currentToken])
 
     def tokenize(self, program):
         tokenList = []
@@ -66,7 +61,7 @@ class Parse():
             self.step()
             self.statSequence()
             self.step()
-        print("BOOBIES", self.currentProgram)
+
         print("computation exit")
         return None
 
@@ -107,8 +102,6 @@ class Parse():
 ############################################################################################################################    
     #statSequence = statement { “;” statement } [ “;” ]4 .
     def statSequence(self):
-        self.depth += 1
-        print((self.depth*"---- ") + "statSequence start: ", [self.currentToken])
         
         self.statement()
         while self.currentToken == ';':
@@ -116,14 +109,11 @@ class Parse():
             if self.currentToken != '}':    
                 self.statement()
         
-
-        print((self.depth*"---- ") + "statSequence exit")
-        self.depth -= 1
         return None
     
     #statement = assignment | funcCall 3 | ifStatement | whileStatement | returnStatement.
     def statement(self):
-        print("\nstatement start: ", [self.currentToken])
+        print("statement start: ", [self.currentToken])
         
         if self.currentToken == 'let':
             self.assignment()
@@ -140,7 +130,7 @@ class Parse():
         if self.currentToken == 'return':
             self.returnStatement()
 
-        print("statement exit\n")
+        print("statement exit")
         return None
     
 ############################################################################################################################     
@@ -260,7 +250,6 @@ class Parse():
             if self.currentToken == '/':
                 self.step()
                 self.factor()
-        print([self.currentToken])
         
         print("term exit")
         return None
