@@ -109,7 +109,7 @@ class Parse():
 #Parse("computation 1 +2 *(3+(2-1)+2).2 * 6 .")
 
 #Parse("computation 1 + 1.")
-#Parse("computation 1 + 1 - 1 - 1.")
+Parse("computation 1 + 1 - 1.")
 #Parse("computation (3+11)*3-3/3.")
 #Parse("computation 3+11*3-3/3.")
 #Parse("computation (3+11-(3+5))*3-3/3.")

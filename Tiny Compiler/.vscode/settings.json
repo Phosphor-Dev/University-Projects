@@ -5,4 +5,6 @@
             "strings": "#43b581"
         }
     },
+    "python.analysis.typeCheckingMode": "off",
+    "python.analysis.autoImportCompletions": true,
 }
