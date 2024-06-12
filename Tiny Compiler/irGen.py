@@ -95,10 +95,8 @@ class irGen():
         for line in self.content:
             if line == "if start":
                 self.makeInstStr(instList)
-                self.blocks.append(Block(0, False, '{}'))
-                self.blocks.append(Block(1, False, '{}'))
-                self.blocks.append(Block(2, False, '{}'))
-                self.blocks.append(Block(3, True, '{}'))
+                self.blocks.append(Block(0, False, self.makeInstStr(instList)))
+                instList = []
 
             else:
                 instList.append(line)

@@ -1,25 +1,25 @@
 class Parse():
     def __init__(self, text):
-        self.letters = "abcdefghijklmnopqrstuvwxyz"
-        self.digits = "0123456789"
-        self.symbols = "<-"
-        self.keywords = ["computation", "var"]
-        self.identifiers = self.letters + self.digits
+        letters = "abcdefghijklmnopqrstuvwxyz"
+        digits = "0123456789"
+        symbols = "<-"
+        keywords = ["computation", "var"]
+        identifiers = letters + digits
         
-        self.variables = {}
+        variables = {}
         
-        self.currentProgram = []
-        self.currentToken = None
+        currentProgram = []
+        currentToken = None
 
-        self.programs = self.tokenize(text.split('.')[:-1])
-        self.solve(self.programs)
+        programs = tokenize(text.split('.')[:-1])
+        solve(programs)
 
     def tokenize(self, programs):
         programList = []        
         for program in programs:
             tokenList = []
             for i in range(len(program)):
-                if (program[i].isnumeric() or program[i].isalpha()) and (i > 0) and (program[i] not in self.symbols) and ((tokenList[-1].isnumeric() or tokenList[-1].isalpha()) or tokenList[-1][-1] == ';'):
+                if (program[i].isnumeric() or program[i].isalpha()) and (i > 0) and (program[i] not in symbols) and ((tokenList[-1].isnumeric() or tokenList[-1].isalpha()) or tokenList[-1][-1] == ';'):
                     tokenList[-1] += program[i]
                 elif program[i] == '-' and tokenList[-1] == '<':
                     tokenList[-1] += program[i]
@@ -31,75 +31,75 @@ class Parse():
         return programList
     
     def step(self):
-        self.currentProgram = self.currentProgram[1:]
-        if len(self.currentProgram) > 0:
-            self.currentToken = self.currentProgram[0]
+        currentProgram = currentProgram[1:]
+        if len(currentProgram) > 0:
+            currentToken = currentProgram[0]
         else:
-            self.currentToken = None
+            currentToken = None
 
     def replace(self):
-        for i in range(len(self.currentProgram)):
-            if self.currentProgram[i] in self.variables:
-                self.currentProgram[i] = str(int(self.variables[self.currentProgram[i]]))
-                self.currentToken = self.currentProgram[0]
+        for i in range(len(currentProgram)):
+            if currentProgram[i] in variables:
+                currentProgram[i] = str(int(variables[currentProgram[i]]))
+                currentToken = currentProgram[0]
 
     def solve(self, programList):
         for program in programList:
-            self.currentProgram = program
-            self.currentToken = program[0]
-            self.comps()
+            currentProgram = program
+            currentToken = program[0]
+            comps()
 
     def comps(self):
-        if self.currentToken == "computation":
-            self.step()
-            while "var" in self.currentProgram:
-                if self.currentToken == "var":
-                    self.step()
-                    name = self.currentToken
-                    self.step()
-                    self.step()
-                    value = self.exprs()
-                    self.variables[name] = value
-                    self.step()
-                    self.replace()
-            print(self.exprs())
-            while ';' in self.currentProgram:
-                self.step()
-                print(self.exprs())
+        if currentToken == "computation":
+            step()
+            while "var" in currentProgram:
+                if currentToken == "var":
+                    step()
+                    name = currentToken
+                    step()
+                    step()
+                    value = exprs()
+                    variables[name] = value
+                    step()
+                    replace()
+            print(exprs())
+            while ';' in currentProgram:
+                step()
+                print(exprs())
         else:
-            print(self.exprs())
+            print(exprs())
                  
     def exprs(self):
-        result = self.terms()
-        while self.currentToken in ('+', '-'):
-            if self.currentToken == '+':
-                self.step()
-                result += self.terms()
-            if self.currentToken == '-':
-                self.step()
-                result -= self.terms()
+        result = terms()
+        while currentToken in ('+', '-'):
+            if currentToken == '+':
+                step()
+                result += terms()
+            if currentToken == '-':
+                step()
+                result -= terms()
         return result    
 
     def terms(self):
-        result = self.factors()
-        while self.currentToken in ('*', '/'):
-            if self.currentToken == '*':
-                self.step()
-                result *= self.terms()
-            if self.currentToken == '/':
-                self.step()
-                result /= self.terms()
+        result = factors()
+        while currentToken in ('*', '/'):
+            if currentToken == '*':
+                step()
+                result *= terms()
+            if currentToken == '/':
+                step()
+                result /= terms()
         return result
 
     def factors(self):
         result = None
-        if self.currentToken.isnumeric():
-            result = int(self.currentToken)
-            self.step()
-        elif self.currentToken == '(':
-            self.step()
-            result = self.exprs()
-            self.step()
+        if currentToken.isnumeric():
+            result = int(currentToken)
+            step()
+        elif currentToken == '(':
+            step()
+            result = exprs()
+            step()
         return result
 
 #Parse("computation var i <- 2 * 3; i - 5 - 1 .")
