@@ -1,11 +1,18 @@
-read
-ADD (1)(2)
-ADD (2)(3)
+assign
+1:read
+assign
+assign
+assign
+2:ADD (1)(2)
+assign
+3:ADD (2)(3)
 if
-BLTI (3)(0)
-ADD (4)(5)
+4:BLTI (3)(0)
+assign
+5:ADD (4)(5)
 fi
 else
+assign
 esle
-write (8)
-write (4)
+6:write (8)
+7:write (4)

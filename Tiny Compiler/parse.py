@@ -1,61 +1,73 @@
-import structures
-from tokens import getTokens
+from tokens import *
+from structures import *
+from graphs import *
+
 class Result():
     def __init__(self, kind, result):      
         self.kind = kind
         self.value = result
         self.address = result
         self.regNum = result
-        
-class Graph():
-    def __init__(self):
-        pass
+    
+class Inst():
+    def __init__(self, num,  op, arg1 = None, arg2 = None):      
+        self.num = num
+        self.op = op
+        self.arg1 = arg1
+        self.arg2 = arg2
+
+        if arg1 != None and arg2 != None:
+            self.text = num + op +" (" + str(arg1) + ")(" + str(arg2) + ")"
+        if arg1 != None and arg2 == None:
+            self.text = num + op +" (" + str(arg1) + ")"
+        if arg1 == None and arg2 == None:
+            self.text = num + op
 
 class Tiny():
     def __init__(self):
-        self.symTable = structures.SymTable()
-        self.variables = {}#structures.DomTree()
-        self.regs = structures.RegStack()
+        self.variables = {}
+        self.regs = RegStack()
+        self.CSEtree = CSETree()
+        self.varTable = VarTable()
         
         self.program = getTokens()
         self.pc = self.program[0]
         self.sp = 0
 
-        self.file = open(r"outputs\graph.txt", 'w')
+        self.graph = Graph()
+        self.instIndex = 1
+
+        self.file = open(r"outputs\insts.txt", 'w')
         self.computation()
         self.file.close()
 
+        self.CSEtree.print()
+        self.varTable.print()
         print(self.variables)
-        #print(self.symTable.regs)
         print(self.regs.regs)
         print(self.regs.allocTable)
-        #print(self.regs.kindTable)
 
     def step(self):
         self.program = self.program[1:]
         self.pc = self.program[0]
-        #print(self.program)
+
+    def getInstIndex(self):
+        instsList = self.instIndex
+        self.instIndex += 1
+        return str(instsList) + ":"
 
     def load(self, result):
         match result.kind:
             case 'const':
-                print("LOADING CONST: ", result.kind, result.value)
+                #print("LOADING CONST: ", result.kind, result.value)
                 result.regNum = self.regs.alloc()
-                #self.file.write("ADDI " + str(result.regNum) + " " + "0 " + str(result.value) + "\n")
-                #PutF1 ADDI result.regNum 0 result.value
                 result.kind = 'reg'
             case 'var':
-                print("LOADING VAR: ", result.kind, result.value)
+                #print("LOADING VAR: ", result.kind, result.value)
                 result.regNum = self.regs.alloc()
-                #self.file.write("LDW (" + str(result.regNum) + ")(" + "BASE" + ")(" + str(result.address) + ")\n")
-                #PutF1 LDW result.regNum BASEREG result.address
                 result.kind = 'reg'
 
     def compute(self, op, x, y):
-        print("##############################################################")
-        print("COMPUTING WITH GIVEN KINDS: ", op, x.kind, y.kind)
-        #print("STARTING COMPUTE X: ", x.value, x.address, x.regNum)
-        #print("STARTING COMPUTE Y: ", y.value, y.address, y.regNum)
         if x.kind == 'const' and y.kind == 'const':
             print()
             self.doRegOp(op, x, y)
@@ -67,16 +79,17 @@ class Tiny():
                 case 'reg':
                     data = x.address
 
-            print("X: ", x.kind, x.value, x.address, x.regNum)
+            #print("X: ", x.kind, x.value, x.address, x.regNum)
             self.load(x)
             self.regs.regs[x.regNum] = data
-            
-            
-            print(self.regs.regs)
             if y.kind == 'const':
-                self.file.write(op +"I (" + str(x.regNum) + ")(" + str(y.regNum) + ")\n")
+                inst = Inst(self.getInstIndex(), op, str(x.regNum), str(y.regNum)) #PutF1 operator, x.regNum, x.regNum, y.regNum
+                
+                self.CSEtree.add(op, x.regNum, y.regNum)
+                
+                self.file.write(inst.text + "\n")
                 self.doRegOp(op, x, y)
-                #PutF1 operator, x.regNum, x.regNum, y.regNum
+                
             else:
                 data = "ERROR"
                 match x.kind:
@@ -85,42 +98,42 @@ class Tiny():
                     case 'reg':
                         data = x.address
 
-                print("Y: ", y.kind, y.value, y.address, y.regNum)
+                #print("Y: ", y.kind, y.value, y.address, y.regNum)
                 self.load(y)
                 self.regs.regs[x.regNum] = data
-
-                self.file.write(op + " (" + str(x.regNum) + ")(" + str(y.regNum) + ")\n")
-                #PutF1 operator, x.regNum, x.regNum, y.regNum
+                inst = Inst(self.getInstIndex(), op, str(x.regNum), str(y.regNum)) #PutF1 operator, x.regNum, x.regNum, y.regNum
+                
+                self.CSEtree.add(op, x.regNum, y.regNum)
+                
+                self.file.write(inst.text + "\n")
                 self.doRegOp(op, x, y)
                 self.regs.dealloc(y.regNum)
-        print("##############################################################")
 
     def doRegOp(self, op, x, y):
         match op:
-            case "PHI":
+            case "phi":
                 pass
-            case "ADD":
+            case "add":
                 x.value = x.value + y.value
-            case "SUB":
+            case "sub":
                 x.value = x.value - y.value
-            case "MUL":
+            case "mul":
                 x.value = x.value * y.value
-            case "DIV":
+            case "div":
                 x.value = x.value / y.value
-            ############
-            case "BNE":
+            case "bne":
                 x.value = x.value != y.value
-            case "BEQ":
+            case "beq":
                 x.value = x.value == y.value
-            case "BLE":
+            case "ble":
                 x.value = x.value <= y.value
-            case "BLT":
+            case "blt":
                 x.value = x.value < y.value
-            case "BGE":
+            case "bge":
                 x.value = x.value >= y.value
-            case "BGT":
+            case "bgt":
                 x.value = x.value > y.value
-            case "CMP":
+            case "cmp":
                 pass
         
     def computation(self):
@@ -133,6 +146,7 @@ class Tiny():
         self.step()
         self.statSequence()
         self.step()
+        self.file.write("end\n")
 
     def funcBody(self):
         if self.pc == "var":
@@ -235,23 +249,31 @@ class Tiny():
 
         match funcName:
             case "OutputNum":
-                print(params[0].value)
-                self.file.write("write (" + str(params[0].value) + ")\n")
+                #print(params[0].value)
+                inst = Inst(self.getInstIndex(), "write", str(params[0].value))
+                self.file.write(inst.text + "\n")
             case "OutputNewLine":
-                print('\n')
-                self.file.write("writeNL\n")
+                #print('\n')
+                inst = Inst(self.getInstIndex(), "writeNL")
+                self.file.write(inst.text + "\n")
             case "InputNum":
                 result = Result('const', int(input()))
-                self.file.write("read\n")
+                self.load(result)
+                inst = Inst(self.getInstIndex(), "read")
+                self.file.write(inst.text + "\n")
                 return result
 
     def assignment(self):
+        self.file.write("assign\n")
         self.step()
         identifier = self.pc
         self.step()
         self.step()
         value = self.expression()
         self.variables[identifier] = value.value
+        print(value.kind)
+        if value.kind != 'const':
+            self.varTable.update(identifier, value.regNum)
 
     def relation(self):
         x = self.expression()
@@ -261,17 +283,17 @@ class Tiny():
 
         match op:
             case '==':
-                self.compute('BEQ', x, y)
+                self.compute('beq', x, y)
             case '!=':
-                self.compute('BNE', x, y)
+                self.compute('bne', x, y)
             case '<':
-                self.compute('BLT', x, y)
+                self.compute('blt', x, y)
             case '<=':
-                self.compute('BLE', x, y)
+                self.compute('ble', x, y)
             case '>':
-                self.compute('BGT', x, y)
+                self.compute('bgt', x, y)
             case '>=':
-                self.compute('BGE', x, y)
+                self.compute('bge', x, y)
         return x
     
     def expression(self):
@@ -282,9 +304,9 @@ class Tiny():
             y = self.term()
             match op:
                 case '+':
-                    self.compute('ADD', x, y)
+                    self.compute('add', x, y)
                 case '-':
-                    self.compute('SUB', x, y)
+                    self.compute('sub', x, y)
         return x
 
     def term(self):
@@ -295,9 +317,9 @@ class Tiny():
             y = self.factor()
             match op:
                 case '*':
-                    self.compute('MUL', x, y)
+                    self.compute('mul', x, y)
                 case '/':
-                    self.compute('DIV', x, y)
+                    self.compute('div', x, y)
         return x
     
     def factor(self):

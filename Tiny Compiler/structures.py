@@ -17,52 +17,93 @@ class RegStack():
     def dealloc(self, regNum):
         self.regs[regNum] = 0
         self.allocTable[regNum] = False
-        #print("DEALLOC CALLED", self.regs)
 
-
-class SymTable():
+class CSETree():
     def __init__(self):
-        self.regs = {}
-        self.id = 0
-
-    def lookup(self, name):
-        return self.regs[name]
+        self.addLL = Node()
+        self.subLL = Node()
+        self.mulLL = Node()
+        self.divLL = Node()
     
-    def add(self, name):
-        self.regs[name] = self.id
-        self.id += 1
+    def add(self, op, reg1, reg2):
+        match op:
+            case 'add':
+                self.addLL.insert(op, reg1, reg2)
+            case 'sub':
+                self.subLL.insert(op, reg1, reg2)
+            case 'mul':
+                self.mulLL.insert(op, reg1, reg2)
+            case 'div':
+                self.divLL.insert(op, reg1, reg2)
 
-class DomTree():
+    def print(self):
+        print("-----------------")
+        self.addLL.printLL()
+        print("-----------------")
+        self.subLL.printLL()
+        print("-----------------")
+        self.mulLL.printLL()
+        print("-----------------")
+        self.divLL.printLL()
+        print("-----------------")
+
+class Node():
+    def __init__(self, op = None, reg1 = None, reg2 = None):
+        self.op = op
+        self.reg1 = reg1
+        self.reg2 = reg2
+        self.next = None
+        self.head = None
+    
+    def insert(self, op, reg1, reg2):
+        newNode = Node(op, reg1, reg2)
+        if self.head is None:
+            self.head = newNode
+            return
+        else:
+            newNode.next = self.head
+            self.head = newNode
+    
+    def printLL(self):
+        currentNode = self.head
+        while(currentNode):
+            print(currentNode.op, currentNode.reg1, currentNode.reg2)
+            currentNode = currentNode.next
+
+class VarTable():
     def __init__(self):
-        
-        pass
+        self.table = {}
+    
+    def update(self, ident, reg):
+        for k,v in list(self.table.items()):
+            if ident in v:
+                self.table[k].remove(ident)
+                if len(self.table[k]) == 0:
+                    del self.table[k]
+        if reg in self.table:
+            self.table[reg].append(ident)
+        else:
+            self.table[reg] = [ident]
+        print(self.table)
+    
+    def print(self):
+        print(self.table)
 
-"""reg = RegStack()
-print(reg.allocTable)
-print(reg.regs)
-print('')
+"""table = VarTable()
+table.update('a', 1)
+#table.update('b', 2)
+#table.update('c', 3)
+#table.update('d', 2)
+#table.update('d', 3)
 
-reg.alloc()
-print(reg.allocTable)
-print(reg.regs)
-print('')
+tree = CSETree()
 
-reg.alloc()
-print(reg.allocTable)
-print(reg.regs)
-print('')
-
-reg.dealloc(1)
-print(reg.allocTable)
-print(reg.regs)
-print('')
-
-reg.alloc()
-print(reg.allocTable)
-print(reg.regs)
-print('')
-
-reg.dealloc(2)
-print(reg.allocTable)
-print(reg.regs)
-print('')"""
+#print("----------")
+#tree.addLL.printLL()
+#print("----------")
+tree.addLL.insert("add", 1, 2)
+#tree.addLL.printLL()
+#print("----------")
+tree.addLL.insert("add", 3, 4)
+#tree.addLL.printLL()
+tree.print()"""
