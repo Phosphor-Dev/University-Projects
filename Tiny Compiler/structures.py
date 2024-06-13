@@ -89,7 +89,30 @@ class VarTable():
     def print(self):
         print(self.table)
 
-"""table = VarTable()
+class SymTable():
+    def __init__(self):
+        self.map = {}
+
+    def add(self, ident, value = 0):
+        self.map[ident] = [len(self.map)+1, value]
+
+    def getID(self, ident):
+        return self.map[ident][0] if ident in self.map else False
+    
+    def getVal(self, ident):
+        return self.map[ident][1] if ident in self.map else False
+    
+    def print(self):
+        print(self.map)
+
+"""symTable = SymTable()
+symTable.add('a')
+symTable.add('b')
+symTable.add('c')
+symTable.add('d')
+symTable.print()
+
+table = VarTable()
 table.update('a', 1)
 #table.update('b', 2)
 #table.update('c', 3)

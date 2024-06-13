@@ -25,10 +25,12 @@ class Inst():
 
 class Tiny():
     def __init__(self):
-        self.variables = {}
+        self.symTable = SymTable()
         self.regs = RegStack()
         self.CSEtree = CSETree()
         self.varTable = VarTable()
+
+        self.variables = {}
         
         self.program = getTokens()
         self.pc = self.program[0]
@@ -41,32 +43,72 @@ class Tiny():
         self.computation()
         self.file.close()
 
-        self.CSEtree.print()
-        self.varTable.print()
-        print(self.variables)
-        print(self.regs.regs)
-        print(self.regs.allocTable)
+        #self.CSEtree.print()
+        #self.varTable.print()
+        self.symTable.print()
+        #print(self.regs.regs)
+        #print(self.regs.allocTable)
 
     def step(self):
         self.program = self.program[1:]
         self.pc = self.program[0]
+        print(self.program)
 
     def getInstIndex(self):
         instsList = self.instIndex
         self.instIndex += 1
         return str(instsList) + ":"
 
-    def load(self, result):
-        match result.kind:
+    def load(self, x):
+        match x.kind:
             case 'const':
-                #print("LOADING CONST: ", result.kind, result.value)
-                result.regNum = self.regs.alloc()
-                result.kind = 'reg'
+                x.regNum = self.regs.alloc()
+                #PutF1 addi, x.regNum, 0, x.value
+                x.kind = 'reg'
+                
             case 'var':
-                #print("LOADING VAR: ", result.kind, result.value)
-                result.regNum = self.regs.alloc()
-                result.kind = 'reg'
+                x.regNum = self.regs.alloc()
+                #PutF1 ldw, x.regNum, BASEREG, x.address
+                x.kind = 'reg'
 
+    """def compute(self, op, x, y):
+        if x.kind == 'const' and y.kind == 'const':
+            match op:
+                case "phi":
+                    pass
+                case "add":
+                    x.value = x.value + y.value
+                case "sub":
+                    x.value = x.value - y.value
+                case "mul":
+                    x.value = x.value * y.value
+                case "div":
+                    x.value = x.value / y.value
+                case "bne":
+                    x.value = x.value != y.value
+                case "beq":
+                    x.value = x.value == y.value
+                case "ble":
+                    x.value = x.value <= y.value
+                case "blt":
+                    x.value = x.value < y.value
+                case "bge":
+                    x.value = x.value >= y.value
+                case "bgt":
+                    x.value = x.value > y.value
+                case "cmp":
+                    pass
+        else:
+            self.load(x)
+            if y.kind == 'const':
+                #PutF1 opIMM, x.regNum, x.regNum, y.value
+                inst = Inst(self.getInstIndex(), op, str(x.regNum), str(y.value))
+            else:
+                self.load(y)
+                #PutF1 op, x.regNum, x.regNum, y.regNum
+                inst = Inst(self.getInstIndex(), op, str(x.regNum), str(y.regNum))
+                self.regs.dealloc(y.regNum)"""
+    
     def compute(self, op, x, y):
         if x.kind == 'const' and y.kind == 'const':
             print()
@@ -108,7 +150,7 @@ class Tiny():
                 self.file.write(inst.text + "\n")
                 self.doRegOp(op, x, y)
                 self.regs.dealloc(y.regNum)
-
+    
     def doRegOp(self, op, x, y):
         match op:
             case "phi":
